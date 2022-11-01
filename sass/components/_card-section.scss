@@ -1,6 +1,8 @@
 
 .container {
     height: auto;
+    position: relative;
+
 
     &:focus-within .card,
     &:hover .card {
@@ -14,6 +16,7 @@
 
     .row {
         padding: 0 60px;
+
     
         &__header {
             padding-top: 20px;
@@ -23,19 +26,19 @@
             display: flex;
             gap: 34px;
             width: 100%;
+            white-space: nowrap;
+            position: relative;
         
             .card {
                 margin-top: 15px;
                 border-radius: 10px;
                 position: relative;
-                overflow: hidden;
-                position: relative;
                 display: block;
-                flex: 1 1 0px;
-                transition: transform 500ms;
+                flex: auto;
+                flex-shrink: 0;
+                transition: all 0.5s ease-in-out;
                 box-shadow: 0px 4px 25px 0px rgba(255, 255, 255, 0.25);
-    
-    
+
                     &__horizontal {
                         max-width: 272px;
                         max-height: 176px;
@@ -58,6 +61,7 @@
                         height: 100%;
                         object-fit: cover;
                         overflow: hidden;
+                        border-radius: 10px;
                     }
     
                     &:focus,
@@ -149,7 +153,3 @@
     width: 21px;
     vertical-align: middle;
 }
-
-
-
-
