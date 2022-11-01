@@ -1,0 +1,29 @@
+PRUEBA TÉCNICA DE UX-UI & MAQUETACIÓN WEB 
+Situación:
+La empresa Sillicon Power Inc., cliente de Doonamis, desea tener una aplicación móvil
+que le permita descubrir las series más populares del momento.
+La primera versión de la aplicación debe tener las siguientes funcionalidades:
+• Login/Registro: Mediante correo electrónico y contraseña, redes sociales y
+acceso biométrico con FaceId.
+• Listado de Series: Listado de series más populares con la plataforma en la
+que se puede encontrar y los filtros u operativas que creas de interés para el
+usuario.
+• Detalle: Poder acceder al detalle de la serie, viendo toda la información que
+creas de interés del usuario.
+• Notificaciones Push: Poder recibir notificaciones que creas de interés para el
+usuario.
+Objetivos:
+
+• Objetivo 1: Conceptualizar, diseñar y crear el prototipo de la App con
+disposición vertical para móvil (iPhone 12 o similar) y de la versión web en
+disposición horizontal.
+Toda aportación de valor y creatividad será valorada positivamente.
+
+Objetivo valorable positivamente (opcional)
+• Objetivo 2: Maquetar con HTML + CSS la pantalla de Listado de Series de la
+Web.
+Consideraciones:
+• Herramienta de diseño: Figma
+• Entrega: Entrega del enlace al prototipo App y Web en Figma + código
+fuente de la maquetación Web a través de GitHub. No trabajar directamente
+en la rama master, mínimo usar una rama.
