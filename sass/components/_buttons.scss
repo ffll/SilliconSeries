@@ -67,6 +67,10 @@
   .btn-left { 
     left: 0;
   }
+
+  .btn-platform {
+      max-width: 90px;
+  }
   
   @media only screen and (max-width: 900px) {
     .btn-nav {
