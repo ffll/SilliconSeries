@@ -1,0 +1,89 @@
+.btn {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+    &__primary {
+        font-family: 'Roboto';
+        border: 1px solid $primary-color;
+        background-color: transparent;
+        color: $primary-color;
+        border-radius: 50px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        width: 180px;
+        height: 45px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+        &--transparent {
+            border: none;
+            color: $white-color;
+            gap: 10px;
+            width: 120px;
+        }
+    
+        &--selected {
+            background-color:$selected-color;
+            box-shadow: 0px -1px 27px 0px rgba(156, 171, 194, 0.56);
+        }
+    
+    }
+
+
+}
+
+.btn-nav {
+    width: 50px;
+    height: 150px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    color: white;
+    top: 150px;
+    z-index: 5;
+    visibility: hidden;
+  }
+
+  .btn-right {
+    right: 0;
+ }
+
+  .btn-left { 
+    left: 0;
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .btn-nav {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: 901px) {
+    .container:hover .btn-nav {
+      visibility: visible;
+    }
+  }
+  
+
+
+
+  
+
+
+

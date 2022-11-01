@@ -1,0 +1,23 @@
+{
+  "name": "silliconpower",
+  "version": "1.0.0",
+  "description": "migrando proyecto a sass",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass":"node-sass sass/main.scss css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffll/SilliconSeries.git"
+  },
+  "author": "Fede Dotto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ffll/SilliconSeries/issues"
+  },
+  "homepage": "https://github.com/ffll/SilliconSeries#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
