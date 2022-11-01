@@ -1,0 +1,67 @@
+.banner {
+    width: 100%;
+    background-color: black;
+    height: 890px;
+    background: linear-gradient(85.88deg, #000000 15.05%, rgba(0, 0, 0, 0) 48.99%), url("./../img/ImgBanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.bg-white {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-serie {
+    width: 350px;
+}
+
+.logo-serie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.notes {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.tag {
+    background-color: #FD3E81;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.logo-imdb {
+height: 30px;
+vertical-align: top;
+margin-left: 20px;
+margin-right: 10px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.grey-font {
+    color: #D6D6D6;
+}

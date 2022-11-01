@@ -1,0 +1,145 @@
+
+.card-container {
+    width: 1190px;
+    height: 230px;
+    }
+    
+    .content {
+        height: 350px;
+    }
+    
+    .card {
+        width: 272px;
+        height: 176px;
+        margin-top: 15px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .card-container-2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .card-title {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+    }
+    
+    
+    .w-70:before {
+        content : "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0px;
+        height  : 1px;
+        width   : 70%;  
+        border-bottom:5px solid #FD3E81;
+        margin-top:1.2em;
+    }
+    
+    .w-50:before {
+        content : "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0px;
+        height  : 1px;
+        width   : 50%;  
+        border-bottom:5px solid #FD3E81;
+        margin-top:1.2em; 
+    }
+    
+    .w-30:before {
+        content : "";
+        position: absolute;
+        left    : 0;
+        bottom  : 0px;
+        height  : 1px;
+        width   : 30%;  
+        border-bottom:5px solid #FD3E81;
+        margin-top:1.2em; 
+    }
+    
+    .icon-play-36 {
+        top: 45%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 36px;
+        height: 36px;
+    }
+    
+    .section {
+        background: var(--bg-color);
+    }
+    
+    .magenta {
+        color: #FD3E81;
+    }
+    
+    .blue {
+        color: #12D4FF;
+    }
+
+
+
+.card-vertical {
+    width: 176px;
+    margin-top: 24px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 25px 0px rgba(255, 255, 255, 0.25);
+
+}
+
+.card-vertical img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.card-container-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 34px;
+}
+
+.pr {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.top {
+    border: 2px solid #FD3E81;    
+}
+
+#home {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.icon-21 {
+    height: 21px;
+    width: 21px;
+    vertical-align: middle;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-top: 50px;
+}
