@@ -2,7 +2,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     font-size: 62.5%;
-    color: white;
+    color: $white-color;
 }
 
 body {
@@ -22,6 +22,6 @@ h4 {
 p {
     font-size:  1.4rem;
     font-weight: 400;
-    color: #DADADA;
+    color: $p-color;
 }
 
