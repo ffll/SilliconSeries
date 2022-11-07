@@ -1,12 +1,24 @@
 
 .footer {
-    height: 140px;
+    
+    &-content {
+    height: 14rem;
     border-top: 1px solid grey;
-    border-bottom: 5px solid magenta;
     margin-top: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 150px;
+    padding: 0 15rem;
     justify-content: space-between;
+    }
+
+    .line-bottom {
+        height: 1rem;
+        background: linear-gradient(90deg, #00C2FF 14.35%, #AE95F7 48.98%, #FD3E81 78.57%);
+    }
 }
+.swiper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 200px;
+  }

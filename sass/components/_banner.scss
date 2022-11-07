@@ -1,17 +1,15 @@
-.banner {
+.banner{
     width: 100%;
     background-color: black;
     height: 720px;
     background: linear-gradient(85.88deg, #000000 15.05%, rgba(0, 0, 0, 0) 48.99%), url("./../img/ImgBanner.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .bg-glass-white {
     background: rgba(255, 255, 255, 0.15);
@@ -29,6 +27,9 @@
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+}
+.title-serie h1 {
+    font-size: 4.2rem;
 }
 
 .notes {
@@ -61,17 +62,33 @@ margin-right: 10px;
     color: $p-color;
 }
 
-.platform {
-    height: 90px;
-    width: 90px;
+.row__platform {
+    display: flex;
+    align-items: center;
+
+ img {
+    height: 9rem;
+    width: 9rem;
+}
+
+.title-platform {
+    font-size: 500;
+    color: white;
+    padding-bottom: 5px;
+}
+
 }
 
 .subheader {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    gap: 50px;
+    padding:  0 6rem;
+    height: 9rem;
+
+    .left, 
+    .right {
+        flex: 1;
+      }
 }
 
 #titleSubheader {
@@ -81,3 +98,4 @@ margin-right: 10px;
 .spacing {
     height: 30px;
 }
+

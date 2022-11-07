@@ -34,6 +34,12 @@
             gap: 10px;
             width: 120px;
         }
+
+        &--border {
+          color: $white-color;
+          border-color: white;
+
+        }
     
         &--selected {
             background-color:$selected-color;
@@ -44,29 +50,6 @@
 
 
 }
-
-.btn-nav {
-    width: 50px;
-    height: 150px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    outline: none;
-    border: none;
-    color: white;
-    top: 150px;
-    z-index: 5;
-    visibility: hidden;
-  }
-
-  .btn-right {
-    right: 0;
- }
-
-  .btn-left { 
-    left: 0;
-  }
 
   .btn-platform {
       max-width: 90px;
@@ -83,6 +66,25 @@
       visibility: visible;
     }
   }
+
+.btn-small {
+  background: #4DAAE9;
+  box-shadow: 0px -1px 27px rgba(156, 171, 194, 0.56);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 2.5rem;
+  cursor: pointer;
+
+  i {
+    color: white;
+  }
+
+  
+
+}
   
 
 
