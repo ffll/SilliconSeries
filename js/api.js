@@ -179,56 +179,24 @@ function getClassByRate(vote) {
         return "red";
     }
 }
-function getSimilar(id) {
-  var infoURL =
-  "https://api.themoviedb.org/3/tv/" +
-  id +
-  "/similar?&api_key=6b4357c41d9c606e4d7ebe2f4a8850ea";
-  $.getJSON(infoURL, function (data) {
-    for (var i = 0; i < data.results.length; i++) {
-      var id = data.results[i].id;
-      var title = data.results[i].title;
-      var overview = data.results[i].overview;
-      var rating = data.results[i].vote_average;
-      var poster = posterPaths + data.results[i].poster_path;
-      if (poster === "https://image.tmdb.org/t/p/w370_and_h556_bestv2null") {
-        //if their is no poster dont show the movie
-      } else if (
-        poster === "https://image.tmdb.org/t/p/w370_and_h556_bestv2undefined"
-      ) {
-        //dont show if the overview is null
-      } else if (overview == "null") {
-        //dont show if the overview is null
-      } else {
-        $(".similar").append(
-          "<div class='card'> <a class='card__img m" +
-          i +
-          "' id='" +
-          id +
-          "' onclick='tvInfo(" +
-          id +
-          ")' href='#'><img src='" +
-          poster +
-          "' class='image'/></a><div class='card__title'><h4>" +
-          title +
-          "</h4><span class='rating'> " +
-          rating +
-          "</span></div></div>" 
-        );
-      }
-    }
-  });
-}
+
 
 
   function tvInfo(id) {
     $(".movie").remove();
     $(".banner").hide();
     $(".container").hide();
+    var youTube = "https://www.youtube.com/embed/";
     var infoURL =
       "https://api.themoviedb.org/3/tv/" +
       id +
       "?&api_key=6b4357c41d9c606e4d7ebe2f4a8850ea";
+    var videoUrl =
+      "https://api.themoviedb.org/3/tv/" +
+      id +
+      "/videos?&api_key=6b4357c41d9c606e4d7ebe2f4a8850ea";
+
+
     $.getJSON(infoURL, function (data) {
       var genre;
       if (data.genres.length > 3) {
@@ -257,6 +225,14 @@ function getSimilar(id) {
       var rating = data.vote_average;
       var overview = data.overview;
       var poster = posterPaths + data.poster_path;
+
+      $.getJSON(videoUrl, function (data) {
+            var video = data.results[0].key;
+            console.log(video);
+      });
+
+
+
       if (poster === "https://image.tmdb.org/t/p/w370_and_h556_bestv2null") {
         poster = "https://via.placeholder.com/370x556?text=No+Poster&000.jpg";
       }
@@ -449,56 +425,55 @@ function seriesInfo(id, num) {
         var episode = data.episodes[i].name;
         var overview = data.episodes[i].overview;
         var airdate = data.episodes[i].air_date;
+        var imgepisodeURL =
+        "https://api.themoviedb.org/3/tv/" +
+        id +
+        "/season/" +
+        num +
+        "/episode/" +
+        number +
+        "/images"+
+        "?&api_key=36170845195fe8e38f1743f4684da846";
+
+        $.getJSON(imgepisodeURL, function (data) {
+          console.log(data);
+          var imgEp = data.stills[0].file_path;
+          console.log(imgEp);
 
 
-        $(".seasons").append(
-         `  <div class="row episode">
-            <div class="row__episodes">
-                <article class="row__episodes--card">
-                    <div>
-                        <h2>` + number + "</h2>" + `
-                    </div>
-                    <div class='episode-img'>`+
-                    "<img  src='https://images2.minutemediacdn.com/image/fetch/w_2000,h_2000,c_fit/https%3A%2F%2Fwinteriscoming.net%2Ffiles%2Fimage-exchange%2F2022%2F09%2Fie_92378.jpeg'  alt='episodes'>" + 
-                   ` </div>
-                    <div>
-                <h3><span>` +
-                 episode + "</span></h3>" + 
-                "<p>" + overview + "</p>" +
-              "</div>" + `
+          $(".seasons").append(
+            `  <div class="row episode">
+               <div class="row__episodes">
+                   <article class="row__episodes--card">
+                       <div>
+                           <h2>` + number + "</h2>" + `
+                       </div>
+                       <div class='episode-img'>`+
+                       "<img  src='"+backgroundPaths+imgEp+"'  alt='episodes'>" + 
+                      ` </div>
+                       <div>
+                   <h3><span>` +
+                    episode + "</span></h3>" + 
+                   "<p>" + overview + "</p>" +
+                 "</div>" + `
+   
+               <div>
+                   <h4><span>49 min</span></h4>
+               </div>
+                   </article>
+   
+               </div>` 
+           );
+        
+        });
 
-            <div>
-                <h4><span>49 min</span></h4>
-            </div>
-                </article>
-
-            </div>` 
-        );
+       
       }
-    });
+   
+  });
   }
   
  
-async function episodeImg(id, num, number) {
-
-    var imgepisodeURL =
-    "https://api.themoviedb.org/3/tv/" +
-    id +
-    "/season/" +
-    num +
-    "/episode/" +
-    number +
-    "/images"+
-    "?&api_key=36170845195fe8e38f1743f4684da846";
-
-    const resp =  await fetch(imgepisodeURL);
-    const respData = await resp.json();
-    var path = respData.stills[0].file_path;
-    var img = backgroundPaths + path;
-    
-    return img;
-    
-}
 
 
 
@@ -507,10 +482,8 @@ showTv(animated);
 showTv(action);
 showTv(adventure);
 showTv(sort);
-feather.replace();
 
-var a = episodeImg(94997,1,1);
-console.log(a);
+
 
 
 
