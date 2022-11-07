@@ -44,28 +44,41 @@
 }
 
 .menu {
-    margin: 0 60px;
+    padding: 0 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
+    background: rgba(49, 48, 54, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 0px solid rgba(49, 48, 54, 0.2);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
 }
 
 .header-content {
     width: 50vw;
-    padding: 80px;
+    padding: 8rem 0 8rem 8rem;
 }
 
 
 .header-description {
     font-size: 18px;
-    font-size: 200;
+    font-weight: 200;
     width: 480px;
     margin-top: 20px;
     margin-left: 10px;
 }
 
+.header-overview {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 20px;
+}
 
 .nav-left, .nav-right {
     display: flex;

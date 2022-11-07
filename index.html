@@ -13,169 +13,118 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@300;500;700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-
-
-
 
 </head>
 <body>
-    <main>
-        <section class="banner">
-            <header class="header-black">
 
-                <div class="menu">
-                <div class="nav-left">
-                        <figure><img class="logo" src="./img/logo_sillicon.png" alt="Logo Sillicon Series"></figure>
-                        <nav>
-                            <ul class="main-nav">
-                            <li class="main-nav__item"><a id="home" href="#">Home</a></li>
-                            <li class="main-nav__item"><a href="#">My List</a></li>
-                            </ul>
-                        </nav>
-                </div>
-
-                <div class="nav-right">
-                        <nav>
+    <header>
+            <div class="menu">
+            <div class="nav-left">
+                    <figure><img class="logo" src="./img/logo_sillicon.png" alt="Logo Sillicon Series"></figure>
+                    <nav>
                         <ul class="main-nav">
-                        <li class="main-nav__item"><a href="#"><i class="icon-21" data-feather="search"></i></a></li>
-                        <li class="main-nav__item"><a href="#"><i class="icon-21" data-feather="bell"></i></a></li>
-                        <li class="main-nav__item"><a class="main-nav__item" href="#">My Account</a></li>
+                        <li class="main-nav__item"><a id="home" href="index.html">Home</a></li>
+                        <li class="main-nav__item"><a href="#">My List</a></li>
                         </ul>
-                        </nav>
-                        <a href="#"><img class="img-user" src="./img/img_user.png" alt=""></a>
-                </div>
-                </div>
-     
-                
-            </header>
+                    </nav>
+            </div>
 
+            <div class="nav-right">
+                    <nav>
+                    <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <div class="search">
+                            <form class="search-form"><button type="submit" class="search-button"><i class="icon-21" data-feather="search"></i></button><input id="search" onKeyPress="return checkSubmit(event)" type="search" placeholder="&nbsp;Search for a serie..." class="search-input" value=""></form>
+                        </div>
+                    </li>
+                    <li class="main-nav__item"><i class="icon-21" data-feather="bell"></i></li>
+                    <li class="main-nav__item"><a class="main-nav__item" href="#">My Account</a></li>
+                    </ul>
+                    </nav>
+                    <a href="#"><img class="img-user" src="./img/img_user.png" alt=""></a>
+            </div>
+            </div>
+    </header>
+
+    <main>
+        
+        <section  class="banner">
+            <div></div>   
             <section class="header-content">
                 <div class="logo-serie">
-                    <img src="./img/logo_stranger.png" alt="">
+                    <img src="./img/logo_stranger.png" alt="Logo Serie">
                 </div>
                 <div class="header-description">The story tells of the sudden disappearance of a child in this city during the 1980s, a fact that uncovers the strange events </div>
                 <div class="notes"><span class="tag">16+</span>2022 | <span class="grey-font">Mystery · Thriller</span>  <img class="logo-imdb" src="./img/imdb.png" alt=""> <span class="bold">9.0</span><span class="grey-font">/10</span></div>
-                <div class="btn"><button class="btn__primary"><i class="icon-21" data-feather="film"></i>&nbsp;&nbsp;<span>Watch Trailer</span></button><button class="btn__primary btn__primary--transparent"><i class="icon-21" data-feather="info"></i><span>More Info</span></button></div>
+                <div class="btn"><button class="btn__primary"><i class="icon-21" data-feather="film"></i>&nbsp;&nbsp;<span>Watch Trailer</span></button><button class="btn__primary btn__primary--transparent" onclick="tvInfo(66732)"><i class="icon-21" data-feather="info"></i><span>More Info</span></button></div>
             </section>
 
-            <section class="container bg-glass-white">
+            <section class="bg-glass-white">
                 <section class="row subheader">
-                    <h2 class="row__header" id="titleSubheader">Watch on</h2> 
-                    <div class="row__platform">
+                    <h2 class="row__header left" id="titleSubheader">Watch on</h2> 
+                    <div class="row__platform center">
+                        <div>
                         <img src="./img/logo_hbo.png" alt="" class="platform">
+                        </div>
+                        <div>
+                            <p class="title-platform">HBO Max</p>
+                            <button class="btn-small"><i class="icon-12" data-feather="play"></i> Play</button>
+                            </div>
+                        <div>
                         <img src="./img/logo_netflix.png" alt="" class="platform">
+                        </div>
+                        <div>
+                            <p class="title-platform">Netflix</p>
+                            <button class="btn-small"><i class="icon-12" data-feather="play"></i> Play</button>
+                            </div>
+                        <div>
                         <img src="./img/logo_prime.png" alt="" class="platform">
+                        </div>
+                        <div>
+                        <p class="title-platform">Prime video</p>
+                        <button class="btn-small"><i class="icon-12" data-feather="play"></i> Play</button>
+                        </div>
+                        
                     </div>
+                    <div class="right"></div>
 
                 </section>
 
             </section>
         </section>
+
+        <section class="detail"></section>
+
         <section class="container">
-            <button  class="btn-nav btn-left" type="button">
-                <i class="icon-21" data-feather="chevron-left"></i>
-            </button>
-            <section class="row">
-                <h2 class="row__header"><i class="icon-21" data-feather="monitor"></i>&nbsp;&nbsp;New releases</h2> 
-                <div class="row__slider">
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr1.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class=" card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr2.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Dahmer</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr3.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Cabinet of curiosities</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr4.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>The Peripheral</h4><p class="pr">Crime · Drama</p></div> 
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr5.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>        
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/nr/nr6.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>Westworld</h4><p class="pr">Thriller · Drama</p></div>            
-                </div>
+  
+            <div class="row swiper">
+              <div class="titles">
+                <h2 class="row__header"><i class="icon-21" data-feather="monitor"></i>&nbsp;&nbsp;New Releases</h2> 
+             </div>
+              <div class="row__slider swiper-wrapper new" id="new-releases">
+              </div>
+
+              <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> 
             </div>
 
-            </section>
-            <button  class=" btn-nav btn-right" type="button">
-                <i class="icon-21" data-feather="chevron-right"></i>
-              </button>
+          </section>
 
-        </section>
-        <div class="spacing"></div>
-        <section class="container">
-            <button  class=" btn-nav btn-left" type="button">
-                <i class="icon-21" data-feather="chevron-left"></i>
-            </button>
-            <section class="row">
+          <section class="container">
+
+            <div class="row swiper">
+              <div class="titles">
                 <h2 class="row__header"><i class="icon-21" data-feather="globe"></i>&nbsp;&nbsp;Top 10 Global</h2> 
-                <div class="row__slider">
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg1.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>House</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg2.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Riverdale</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg3.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Breaking Bad</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg4.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>Queens Gambit</h4><p class="pr">Crime · Drama</p></div> 
-                </div>
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg5.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>Better Call Saul</h4><p class="pr">Thriller · Drama</p></div>        
-                </div>
-                <div class="card card__vertical top">
-                    <div class="card__img">
-                    <img src="./img/tg/tg6.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>            
-                </div>
+             </div>
+              <div class="row__slider swiper-wrapper action"></div>
+              <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> 
             </div>
 
-            </section>
-            <button  class=" btn-nav btn-right" type="button">
-                <i class="icon-21" data-feather="chevron-right"></i>
-              </button>
-        </section>
-        <div class="spacing"></div>
+          </section>
+
         <section class="container">
 
             <section class="row">
@@ -194,157 +143,44 @@
                     </div>
                 </div>
 
-                <div class="row__slider">
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr1.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr2.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>Dahmer</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr3.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>Cabinet of curiosities</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr4.png" alt=""  />
-                        </div>
-                        <div class="card__title"><h4>The Peripheral</h4><p class="pr">Crime · Drama</p></div> 
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr5.png" alt=""  />
-                        </div>
-                        <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>        
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr6.png" alt=""  />
-                        </div>
-                        <div class="card__title"><h4>Westworld</h4><p class="pr">Thriller · Drama</p></div>            
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr1.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
+                <div class="content">
+                    <div class="inner-container">
+                      <div class="item-container">
+                      </div>
+                      <div class="load-more"><button class="btn__primary btn__primary--border" id="loadMore"><span>Load More</span></button></div>
                     </div>
                 </div>
-
-            </section>
 
         </section>
-        <div class="spacing"></div>
+
         <section class="container">
-            <button  class=" btn-nav btn-left" type="button">
-                <i class="icon-21" data-feather="chevron-left"></i>
-            </button>
-            <section class="row">
-                <h2 class="row__header"><i class="icon-21" data-feather="trending-up"></i>&nbsp;&nbsp;Trending now</h2> 
-                <div class="row__slider">
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f1.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f2.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Dahmer</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f3.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Cabinet of curiosities</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f4.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>The Peripheral</h4><p class="pr">Crime · Drama</p></div> 
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f5.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>        
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/fp/f6.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>Westworld</h4><p class="pr">Thriller · Drama</p></div>            
-                </div>
+
+            <div class="row swiper">
+              <div class="titles">
+                <h2 class="row__header"><i class="icon-21" data-feather="globe"></i>&nbsp;&nbsp;Trending Now</h2> 
+             </div>
+              <div class="row__slider swiper-wrapper adventure" id="trending-now"></div>
+              <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> 
             </div>
-            <button  class=" btn-nav btn-right" type="button">
-                <i class="icon-21" data-feather="chevron-right"></i>
-            </button>
-            </section>
 
-        </section>
-        <div class="spacing"></div>
-        <section class="container">
-            <button  class=" btn-nav btn-left" type="button">
-                <i class="icon-21" data-feather="chevron-left"></i>
-            </button>
-            <section class="row">
+          </section>
+
+          <section class="container">
+
+            <div class="row swiper">
+              <div class="titles">
                 <h2 class="row__header"><i class="icon-21" data-feather="monitor"></i>&nbsp;&nbsp;Animated TV Shows</h2> 
-                <div class="row__slider">
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a1.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a2.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Dahmer</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a3.png" alt=""  >
-                    </div>
-                    <div class="card__title"><h4>Cabinet of curiosities</h4><p class="pr">Crime · Drama</p></div>
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a4.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>The Peripheral</h4><p class="pr">Crime · Drama</p></div> 
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a5.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>        
-                </div>
-                <div class="card card__vertical">
-                    <div class="card__img">
-                    <img src="./img/at/a6.png" alt=""  />
-                    </div>
-                    <div class="card__title"><h4>Westworld</h4><p class="pr">Thriller · Drama</p></div>            
-                </div>
+             </div>
+              <div class="row__slider swiper-wrapper animated" id="animated-tv"></div>
+              <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> 
             </div>
-            <button  class=" btn-nav btn-right" type="button">
-                <i class="icon-21" data-feather="chevron-right"></i>
-            </button>
-            </section>
 
-        </section>
-        <div class="spacing"></div>
+          </section>
+        
+
+
         <section class="container">
 
             <section class="row">
@@ -360,38 +196,13 @@
                     </div>
                 </div>
 
-                <div class="row__slider">
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr1.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>The Inmortal</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr2.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>Dahmer</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr3.png" alt=""  >
-                        </div>
-                        <div class="card__title"><h4>Cabinet of curiosities</h4><p class="pr">Crime · Drama</p></div>
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr4.png" alt=""  />
-                        </div>
-                        <div class="card__title"><h4>The Peripheral</h4><p class="pr">Crime · Drama</p></div> 
-                    </div>
-                    <div class="card card__vertical">
-                        <div class="card__img">
-                        <img src="./img/nr/nr5.png" alt=""  />
-                        </div>
-                        <div class="card__title"><h4>From Scracth</h4><p class="pr">Romantic · Drama</p></div>        
-                    </div>
 
+                <div class="content">
+                    <div class="inner-container">
+                      <div class="item-container">
+                      </div>
+                      <div class="load-more"><button class="btn__primary btn__primary--border" id="loadMore"><span>Load More</span></button></div>
+                    </div>
                 </div>
 
             </section>
@@ -409,9 +220,14 @@
             </div>
         </section>
 
+
+
         <footer class="footer">
+            <div class="footer-content">
             <figure><img src="./img/logo_sillicon.png" alt="Logo Sillicon Series" class="logo"></figure>
             <p class="copy">© 2022 all rights reserved</p>
+            </div>
+            <div class="line-bottom"></div>
 
         </footer>
     </main>
@@ -419,6 +235,12 @@
     <script>
         feather.replace()
     </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="main.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/loadmore.js"></script>
+  
 </body>
 </html>

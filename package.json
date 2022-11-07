@@ -1,6 +1,7 @@
 {
   "name": "silliconpower",
   "version": "1.0.0",
+  "type": "module",
   "description": "migrando proyecto a sass",
   "main": "main.js",
   "scripts": {
