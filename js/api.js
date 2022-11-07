@@ -414,7 +414,8 @@ function seriesInfo(id, num) {
       id +
       "/season/" +
       num +
-      "?&api_key=36170845195fe8e38f1743f4684da846";
+      "?&api_key=36170845195fe8e38f1743f4684da846" +
+      '&append_to_response=alternative_titles,credits,similar,videos';
 
       
     $.getJSON(seriesURL, function (data) {
@@ -425,6 +426,7 @@ function seriesInfo(id, num) {
         var episode = data.episodes[i].name;
         var overview = data.episodes[i].overview;
         var airdate = data.episodes[i].air_date;
+        var still = data.episodes[i].still_path;
         var imgepisodeURL =
         "https://api.themoviedb.org/3/tv/" +
         id +
@@ -435,38 +437,29 @@ function seriesInfo(id, num) {
         "/images"+
         "?&api_key=36170845195fe8e38f1743f4684da846";
 
-        $.getJSON(imgepisodeURL, function (data) {
-          console.log(data);
-          var imgEp = data.stills[0].file_path;
-          console.log(imgEp);
-
-
-          $(".seasons").append(
-            `  <div class="row episode">
-               <div class="row__episodes">
-                   <article class="row__episodes--card">
-                       <div>
-                           <h2>` + number + "</h2>" + `
-                       </div>
-                       <div class='episode-img'>`+
-                       "<img  src='"+backgroundPaths+imgEp+"'  alt='episodes'>" + 
-                      ` </div>
-                       <div>
-                   <h3><span>` +
-                    episode + "</span></h3>" + 
-                   "<p>" + overview + "</p>" +
-                 "</div>" + `
-   
-               <div>
-                   <h4><span>49 min</span></h4>
-               </div>
-                   </article>
-   
-               </div>` 
-           );
-        
-        });
-
+        $(".seasons").append(
+          `  <div class="row episode">
+             <div class="row__episodes">
+                 <article class="row__episodes--card">
+                     <div>
+                         <h2>` + number + "</h2>" + `
+                     </div>
+                     <div class='episode-img'>`+
+                     "<img  src='"+backgroundPaths+still+"'  alt='episodes'>" +    
+                    ` </div>
+                     <div>
+                 <h3><span>` +
+                  episode + "</span></h3>" + 
+                 "<p>" + overview + "</p>" +
+               "</div>" + `
+ 
+             <div>
+                 <h4><span>49 min</span></h4>
+             </div>
+                 </article>
+ 
+             </div>` 
+         );
        
       }
    
