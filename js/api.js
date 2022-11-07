@@ -18,7 +18,7 @@ var animated = "&with_genres=16";
 var action = "&with_genres=35";
 var adventure = "&with_genres=10759";
 var sort = "sort_by=popularity.desc";
-
+var similar = "vote_count.gte=50&sort_by=vote_average.desc";
 
 
 
@@ -223,10 +223,8 @@ function getSimilar(id) {
 
   function tvInfo(id) {
     $(".movie").remove();
-    $(".tv").hide();
     $(".banner").hide();
     $(".container").hide();
-    getSimilar(id);
     var infoURL =
       "https://api.themoviedb.org/3/tv/" +
       id +
@@ -319,11 +317,89 @@ function getSimilar(id) {
             <div class="titles">
               <h2 class="row__header"><i class="icon-21" data-feather="monitor"></i>&nbsp;&nbsp;Similar tv shows</h2> 
            </div>
-            <div class="row__slider swiper-wrapper similar"></div>
+            <div class="row__slider swiper-wrapper similar">
+                  <div class='card'> 
+                    <a class='card__img href='#'><img src='../img/similar/nr1.png' class='image'/></a>
+                    <div class='card__title'>
+                      <h4> EL inmortal </h4>
+                      <span class='rating'>8.6</span>
+                    </div>
+                  </div> 
+                  <div class='card'> 
+                  <a class='card__img href='#'><img src='../img/similar/nr2.png' class='image'/></a>
+                  <div class='card__title'>
+                    <h4> Dahmer</h4>
+                    <span class='rating'>8.6</span>
+                  </div>
+                </div> 
+                <div class='card'> 
+                <a class='card__img href='#'><img src='../img/similar/nr3.png' class='image'/></a>
+                <div class='card__title'>
+                  <h4> Cabinet of Curiosities</h4>
+                  <span class='rating'>8.6</span>
+                </div>
+              </div> 
+                    <div class='card'> 
+                    <a class='card__img href='#'><img src='../img/similar/nr4.png' class='image'/></a>
+                    <div class='card__title'>
+                      <h4> Peripherial</h4>
+                      <span class='rating'>8.6</span>
+                    </div>
+                  </div> 
+                  <div class='card'> 
+                  <a class='card__img href='#'><img src='../img/similar/nr5.png' class='image'/></a>
+                  <div class='card__title'>
+                    <h4> From Scratch</h4>
+                    <span class='rating'>8.6</span>
+                  </div>
+                </div> 
+                <div class='card'> 
+                <a class='card__img href='#'><img src='../img/similar/nr6.png' class='image'/></a>
+                <div class='card__title'>
+                  <h4>Underworld</h4>
+                  <span class='rating'>8.6</span>
+                </div>
+              </div> 
+              <div class='card'> 
+              <a class='card__img href='#'><img src='../img/similar/f1.png' class='image'/></a>
+              <div class='card__title'>
+                <h4> Victoria's Secret</h4>
+                <span class='rating'>8.6</span>
+              </div>
+            </div> 
+            <div class='card'> 
+              <a class='card__img href='#'><img src='../img/similar/f3.png' class='image'/></a>
+              <div class='card__title'>
+                <h4> The Activities</h4>
+                <span class='rating'>8.6</span>
+              </div>
+            </div> 
+            <div class='card'> 
+              <a class='card__img href='#'><img src='../img/similar/f6.png' class='image'/></a>
+              <div class='card__title'>
+                <h4>Abbot Elementary</h4>
+                <span class='rating'>8.6</span>
+              </div>
+            </div> 
+            <div class='card'> 
+              <a class='card__img href='#'><img src='../img/similar/f5.png' class='image'/></a>
+              <div class='card__title'>
+                <h4> From Scratch</h4>
+                <span class='rating'>8.6</span>
+              </div>
+            </div> 
+            <div class='card'> 
+              <a class='card__img href='#'><img src='../img/similar/f6.png' class='image'/></a>
+              <div class='card__title'>
+                <h4> From Scratch</h4>
+                <span class='rating'>8.6</span>
+              </div>
+            </div> 
+            </div>
+
             <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div> 
-          </div>
-
+            </div>
         </section>
 
           <footer class="footer">
